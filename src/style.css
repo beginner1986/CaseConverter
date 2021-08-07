@@ -1,0 +1,29 @@
+body {
+    font-family: Arial;
+    margin: auto;
+    width: 80%;
+}
+
+button {
+    background-color: darkolivegreen;
+    border: solid darkgreen 2px;
+    font-size: 1.5em;
+    color: white;
+    margin-right: 15px;
+}
+
+button:hover {
+    background-color: lightgreen;
+    color: black;
+}
+
+textarea {
+    height: 500px;
+    margin: 20px 0;
+    width: 100%;
+}
+
+.title {
+    font-size: 3em;
+    margin-top: 20px;
+}
