@@ -28,7 +28,24 @@ sentenceCaseBtn.addEventListener("click", function () {
         sentences[i] = sentences[i].charAt(0).toUpperCase() +
             sentences[i].substring(1).toLowerCase();
     }
-    console.log(sentences);
 
     textArea.value = sentences.join(". ");
 });
+
+let saveTextFileBtn = document.getElementById("save-text-file");
+saveTextFileBtn.addEventListener("click", function () {
+    download("text.txt", textArea.value);
+});
+
+function download(filename, text) {
+    let element = document.createElement('a');
+    element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+    element.setAttribute('download', filename);
+
+    element.style.display = 'none';
+    document.body.appendChild(element);
+
+    element.click();
+
+    document.body.removeChild(element);
+}
